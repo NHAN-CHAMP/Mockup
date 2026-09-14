@@ -33,7 +33,7 @@ function cleanAlpineClones(html) {
 function injectScripts(html) {
   const base = (process.env.MOCKUP_BASE_PATH || '/Mockup').replace(/\/$/, '');
   const inject = `
-<script src="${base}/shared/demo-banner.js"></script>
+<script src="${base}/shared/demo-banner.js?v=20260914b"></script>
 <script src="${base}/shared/demo-intercept.js"></script>`;
   if (html.includes('</body>')) {
     return html.replace('</body>', inject + '\n</body>');
