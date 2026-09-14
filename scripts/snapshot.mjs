@@ -20,6 +20,16 @@ function pathToFile(pathname) {
   return path.join(root, 'pages', p, 'index.html');
 }
 
+
+function cleanAlpineClones(html) {
+  return html.replace(/<h2\b[^>]*class="[^"]*text-\[16px\][^"]*"[\s\S]*?<\/h2>/g, (block) => {
+    const templates = [...block.matchAll(/<template\b[\s\S]*?<\/template>/g)].map((m) => m[0]);
+    if (templates.length === 0) return block;
+    const open = block.match(/^<h2\b[^>]*>/)?.[0] || '<h2>';
+    return `${open}\n${templates.join('\n')}\n</h2>`;
+  });
+}
+
 function injectScripts(html) {
   const base = (process.env.MOCKUP_BASE_PATH || '/Mockup').replace(/\/$/, '');
   const inject = `
@@ -108,6 +118,7 @@ async function main() {
         continue;
       }
       let html = await page.content();
+      html = cleanAlpineClones(html);
       html = injectScripts(html);
       fs.writeFileSync(outFile, html, 'utf8');
       console.log('Saved', pathname, '→', path.relative(root, outFile));

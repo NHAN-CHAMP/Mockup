@@ -1,4 +1,11 @@
 <!DOCTYPE html><html lang="en" class="h-full"><head>
+<style id="mockup-alpine-boot">html:not(.alpine-ready) ul[x-show]{display:none!important}[x-cloak]{display:none!important}</style>
+<script>
+document.addEventListener('alpine:initialized', function () {
+  document.documentElement.classList.add('alpine-ready');
+});
+setTimeout(function () { document.documentElement.classList.add('alpine-ready'); }, 2500);
+</script>
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="3BmksytZoVShfQYoNZ9sJ58Zve6a4fkyXE9YK8IC">
@@ -567,7 +574,7 @@
                         <!-- Menu Group Title (Collapsible) -->
                         <h2 class="text-[16px] uppercase flex items-center leading-[20px] cursor-pointer select-none transition-all duration-200 menu-item !font-normal menu-item-active justify-start" :class="(!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen) ?
                             'xl:justify-center' : 'justify-start'" @click="toggleGroup(0)">
-                            <template x-if="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen">
+<template x-if="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen">
                                 <span class="flex items-center justify-between w-full">
                                     <span class="flex items-center gap-3">
                                                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/24 24"><path d="M3 9.5L12 3L21 9.5V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M9 22V12H15V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
@@ -577,21 +584,13 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </span>
-                            </template><span class="flex items-center justify-between w-full">
-                                    <span class="flex items-center gap-3">
-                                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/24 24"><path d="M3 9.5L12 3L21 9.5V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M9 22V12H15V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                                                                                <span>เมนูหลัก</span>
-                                    </span>
-                                    <svg class="w-4 h-4 transition-transform duration-200 flex-shrink-0 rotate-180" :class="isGroupOpen(0) ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </span>
-                            <template x-if="!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen">
+                            </template>
+<template x-if="!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen">
                                 <span class="flex items-center justify-center">
                                                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/24 24"><path d="M3 9.5L12 3L21 9.5V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M9 22V12H15V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                                                                     </span>
                             </template>
-                        </h2>
+</h2>
 
                         <!-- Menu Items (Collapsible) -->
                         <ul class="flex flex-col gap-1 mt-2" x-show="isGroupOpen(0) &amp;&amp; ($store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen)" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2">
@@ -857,7 +856,7 @@
                         <!-- Menu Group Title (Collapsible) -->
                         <h2 class="text-[16px] uppercase flex items-center leading-[20px] cursor-pointer select-none transition-all duration-200 menu-item !font-normal menu-item-inactive !text-gray-800 dark:!text-gray-200 justify-start" :class="(!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen) ?
                             'xl:justify-center' : 'justify-start'" @click="toggleGroup(1)">
-                            <template x-if="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen">
+<template x-if="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen">
                                 <span class="flex items-center justify-between w-full">
                                     <span class="flex items-center gap-3">
                                                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 11a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3 21v-2a4 4 0 014-4h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="18" cy="18" r="3" stroke="currentColor" stroke-width="1.5"></circle><path d="M18 15v-.5M18 21v.5M15.35 16.35l-.35-.35M20.65 19.65l.35.35M15 18h-.5M21 18h.5M15.35 19.65l-.35.35M20.65 16.35l.35-.35" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
@@ -867,21 +866,13 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </span>
-                            </template><span class="flex items-center justify-between w-full">
-                                    <span class="flex items-center gap-3">
-                                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 11a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3 21v-2a4 4 0 014-4h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="18" cy="18" r="3" stroke="currentColor" stroke-width="1.5"></circle><path d="M18 15v-.5M18 21v.5M15.35 16.35l-.35-.35M20.65 19.65l.35.35M15 18h-.5M21 18h.5M15.35 19.65l-.35.35M20.65 16.35l.35-.35" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
-                                                                                <span>ผู้ดูแลระบบ</span>
-                                    </span>
-                                    <svg class="w-4 h-4 transition-transform duration-200 flex-shrink-0" :class="isGroupOpen(1) ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </span>
-                            <template x-if="!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen">
+                            </template>
+<template x-if="!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen">
                                 <span class="flex items-center justify-center">
                                                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 11a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3 21v-2a4 4 0 014-4h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="18" cy="18" r="3" stroke="currentColor" stroke-width="1.5"></circle><path d="M18 15v-.5M18 21v.5M15.35 16.35l-.35-.35M20.65 19.65l.35.35M15 18h-.5M21 18h.5M15.35 19.65l-.35.35M20.65 16.35l.35-.35" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
                                                                     </span>
                             </template>
-                        </h2>
+</h2>
 
                         <!-- Menu Items (Collapsible) -->
                         <ul class="flex flex-col gap-1 mt-2" x-show="isGroupOpen(1) &amp;&amp; ($store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen)" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" style="display: none;">
@@ -1195,7 +1186,7 @@
                         <!-- Menu Group Title (Collapsible) -->
                         <h2 class="text-[16px] uppercase flex items-center leading-[20px] cursor-pointer select-none transition-all duration-200 menu-item !font-normal menu-item-inactive !text-gray-800 dark:!text-gray-200 justify-start" :class="(!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen) ?
                             'xl:justify-center' : 'justify-start'" @click="toggleGroup(2)">
-                            <template x-if="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen">
+<template x-if="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen">
                                 <span class="flex items-center justify-between w-full">
                                     <span class="flex items-center gap-3">
                                                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 3.5C7.30558 3.5 3.5 7.30558 3.5 12C3.5 14.1526 4.3002 16.1184 5.61936 17.616C6.17279 15.3096 8.24852 13.5955 10.7246 13.5955H13.2746C15.7509 13.5955 17.8268 15.31 18.38 17.6167C19.6996 16.119 20.5 14.153 20.5 12C20.5 7.30558 16.6944 3.5 12 3.5ZM17.0246 18.8566V18.8455C17.0246 16.7744 15.3457 15.0955 13.2746 15.0955H10.7246C8.65354 15.0955 6.97461 16.7744 6.97461 18.8455V18.856C8.38223 19.8895 10.1198 20.5 12 20.5C13.8798 20.5 15.6171 19.8898 17.0246 18.8566ZM2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM11.9991 7.25C10.8847 7.25 9.98126 8.15342 9.98126 9.26784C9.98126 10.3823 10.8847 11.2857 11.9991 11.2857C13.1135 11.2857 14.0169 10.3823 14.0169 9.26784C14.0169 8.15342 13.1135 7.25 11.9991 7.25ZM8.48126 9.26784C8.48126 7.32499 10.0563 5.75 11.9991 5.75C13.9419 5.75 15.5169 7.32499 15.5169 9.26784C15.5169 11.2107 13.9419 12.7857 11.9991 12.7857C10.0563 12.7857 8.48126 11.2107 8.48126 9.26784Z" fill="currentColor"></path></svg>
@@ -1205,21 +1196,13 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </span>
-                            </template><span class="flex items-center justify-between w-full">
-                                    <span class="flex items-center gap-3">
-                                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 3.5C7.30558 3.5 3.5 7.30558 3.5 12C3.5 14.1526 4.3002 16.1184 5.61936 17.616C6.17279 15.3096 8.24852 13.5955 10.7246 13.5955H13.2746C15.7509 13.5955 17.8268 15.31 18.38 17.6167C19.6996 16.119 20.5 14.153 20.5 12C20.5 7.30558 16.6944 3.5 12 3.5ZM17.0246 18.8566V18.8455C17.0246 16.7744 15.3457 15.0955 13.2746 15.0955H10.7246C8.65354 15.0955 6.97461 16.7744 6.97461 18.8455V18.856C8.38223 19.8895 10.1198 20.5 12 20.5C13.8798 20.5 15.6171 19.8898 17.0246 18.8566ZM2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM11.9991 7.25C10.8847 7.25 9.98126 8.15342 9.98126 9.26784C9.98126 10.3823 10.8847 11.2857 11.9991 11.2857C13.1135 11.2857 14.0169 10.3823 14.0169 9.26784C14.0169 8.15342 13.1135 7.25 11.9991 7.25ZM8.48126 9.26784C8.48126 7.32499 10.0563 5.75 11.9991 5.75C13.9419 5.75 15.5169 7.32499 15.5169 9.26784C15.5169 11.2107 13.9419 12.7857 11.9991 12.7857C10.0563 12.7857 8.48126 11.2107 8.48126 9.26784Z" fill="currentColor"></path></svg>
-                                                                                <span>ข้อมูลบุคลากร</span>
-                                    </span>
-                                    <svg class="w-4 h-4 transition-transform duration-200 flex-shrink-0" :class="isGroupOpen(2) ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </span>
-                            <template x-if="!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen">
+                            </template>
+<template x-if="!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen">
                                 <span class="flex items-center justify-center">
                                                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 3.5C7.30558 3.5 3.5 7.30558 3.5 12C3.5 14.1526 4.3002 16.1184 5.61936 17.616C6.17279 15.3096 8.24852 13.5955 10.7246 13.5955H13.2746C15.7509 13.5955 17.8268 15.31 18.38 17.6167C19.6996 16.119 20.5 14.153 20.5 12C20.5 7.30558 16.6944 3.5 12 3.5ZM17.0246 18.8566V18.8455C17.0246 16.7744 15.3457 15.0955 13.2746 15.0955H10.7246C8.65354 15.0955 6.97461 16.7744 6.97461 18.8455V18.856C8.38223 19.8895 10.1198 20.5 12 20.5C13.8798 20.5 15.6171 19.8898 17.0246 18.8566ZM2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM11.9991 7.25C10.8847 7.25 9.98126 8.15342 9.98126 9.26784C9.98126 10.3823 10.8847 11.2857 11.9991 11.2857C13.1135 11.2857 14.0169 10.3823 14.0169 9.26784C14.0169 8.15342 13.1135 7.25 11.9991 7.25ZM8.48126 9.26784C8.48126 7.32499 10.0563 5.75 11.9991 5.75C13.9419 5.75 15.5169 7.32499 15.5169 9.26784C15.5169 11.2107 13.9419 12.7857 11.9991 12.7857C10.0563 12.7857 8.48126 11.2107 8.48126 9.26784Z" fill="currentColor"></path></svg>
                                                                     </span>
                             </template>
-                        </h2>
+</h2>
 
                         <!-- Menu Items (Collapsible) -->
                         <ul class="flex flex-col gap-1 mt-2" x-show="isGroupOpen(2) &amp;&amp; ($store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen)" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" style="display: none;">
@@ -1293,7 +1276,7 @@
                         <!-- Menu Group Title (Collapsible) -->
                         <h2 class="text-[16px] uppercase flex items-center leading-[20px] cursor-pointer select-none transition-all duration-200 menu-item !font-normal menu-item-inactive !text-gray-800 dark:!text-gray-200 justify-start" :class="(!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen) ?
                             'xl:justify-center' : 'justify-start'" @click="toggleGroup(3)">
-                            <template x-if="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen">
+<template x-if="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen">
                                 <span class="flex items-center justify-between w-full">
                                     <span class="flex items-center gap-3">
                                                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path><circle cx="15" cy="15" r="2"></circle><path d="M13 17l4-4"></path></svg>
@@ -1303,21 +1286,13 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </span>
-                            </template><span class="flex items-center justify-between w-full">
-                                    <span class="flex items-center gap-3">
-                                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path><circle cx="15" cy="15" r="2"></circle><path d="M13 17l4-4"></path></svg>
-                                                                                <span>Onepage</span>
-                                    </span>
-                                    <svg class="w-4 h-4 transition-transform duration-200 flex-shrink-0" :class="isGroupOpen(3) ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </span>
-                            <template x-if="!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen">
+                            </template>
+<template x-if="!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen">
                                 <span class="flex items-center justify-center">
                                                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path><circle cx="15" cy="15" r="2"></circle><path d="M13 17l4-4"></path></svg>
                                                                     </span>
                             </template>
-                        </h2>
+</h2>
 
                         <!-- Menu Items (Collapsible) -->
                         <ul class="flex flex-col gap-1 mt-2" x-show="isGroupOpen(3) &amp;&amp; ($store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen)" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" style="display: none;">
@@ -1359,7 +1334,7 @@
                         <!-- Menu Group Title (Collapsible) -->
                         <h2 class="text-[16px] uppercase flex items-center leading-[20px] cursor-pointer select-none transition-all duration-200 menu-item !font-normal menu-item-inactive !text-gray-800 dark:!text-gray-200 justify-start" :class="(!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen) ?
                             'xl:justify-center' : 'justify-start'" @click="toggleGroup(4)">
-                            <template x-if="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen">
+<template x-if="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen">
                                 <span class="flex items-center justify-between w-full">
                                     <span class="flex items-center gap-3">
                                                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path><path d="M16.24 7.76a6 6 0 0 1 0 8.49"></path><path d="M7.76 16.24a6 6 0 0 1 0-8.49"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path><path d="M4.93 19.07a10 10 0 0 1 0-14.14"></path></svg>
@@ -1369,21 +1344,13 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </span>
-                            </template><span class="flex items-center justify-between w-full">
-                                    <span class="flex items-center gap-3">
-                                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path><path d="M16.24 7.76a6 6 0 0 1 0 8.49"></path><path d="M7.76 16.24a6 6 0 0 1 0-8.49"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path><path d="M4.93 19.07a10 10 0 0 1 0-14.14"></path></svg>
-                                                                                <span>ข่าวสิ่งแวดล้อม</span>
-                                    </span>
-                                    <svg class="w-4 h-4 transition-transform duration-200 flex-shrink-0" :class="isGroupOpen(4) ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </span>
-                            <template x-if="!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen">
+                            </template>
+<template x-if="!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen">
                                 <span class="flex items-center justify-center">
                                                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path><path d="M16.24 7.76a6 6 0 0 1 0 8.49"></path><path d="M7.76 16.24a6 6 0 0 1 0-8.49"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path><path d="M4.93 19.07a10 10 0 0 1 0-14.14"></path></svg>
                                                                     </span>
                             </template>
-                        </h2>
+</h2>
 
                         <!-- Menu Items (Collapsible) -->
                         <ul class="flex flex-col gap-1 mt-2" x-show="isGroupOpen(4) &amp;&amp; ($store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen)" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" style="display: none;">
@@ -1473,7 +1440,7 @@
                         <!-- Menu Group Title (Collapsible) -->
                         <h2 class="text-[16px] uppercase flex items-center leading-[20px] cursor-pointer select-none transition-all duration-200 menu-item !font-normal menu-item-inactive !text-gray-800 dark:!text-gray-200 justify-start" :class="(!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen) ?
                             'xl:justify-center' : 'justify-start'" @click="toggleGroup(5)">
-                            <template x-if="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen">
+<template x-if="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen">
                                 <span class="flex items-center justify-between w-full">
                                     <span class="flex items-center gap-3">
                                                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-1 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1.3.5 2.5 1.5 3.5.8.8 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg>
@@ -1483,21 +1450,13 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </span>
-                            </template><span class="flex items-center justify-between w-full">
-                                    <span class="flex items-center gap-3">
-                                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-1 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1.3.5 2.5 1.5 3.5.8.8 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg>
-                                                                                <span>คลังความรู้</span>
-                                    </span>
-                                    <svg class="w-4 h-4 transition-transform duration-200 flex-shrink-0" :class="isGroupOpen(5) ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </span>
-                            <template x-if="!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen">
+                            </template>
+<template x-if="!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen">
                                 <span class="flex items-center justify-center">
                                                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-1 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1.3.5 2.5 1.5 3.5.8.8 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg>
                                                                     </span>
                             </template>
-                        </h2>
+</h2>
 
                         <!-- Menu Items (Collapsible) -->
                         <ul class="flex flex-col gap-1 mt-2" x-show="isGroupOpen(5) &amp;&amp; ($store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen)" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" style="display: none;">
@@ -1555,7 +1514,7 @@
                         <!-- Menu Group Title (Collapsible) -->
                         <h2 class="text-[16px] uppercase flex items-center leading-[20px] cursor-pointer select-none transition-all duration-200 menu-item !font-normal menu-item-inactive !text-gray-800 dark:!text-gray-200 justify-start" :class="(!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen) ?
                             'xl:justify-center' : 'justify-start'" @click="toggleGroup(6)">
-                            <template x-if="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen">
+<template x-if="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen">
                                 <span class="flex items-center justify-between w-full">
                                     <span class="flex items-center gap-3">
                                                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-7 7c0 2.4 1.2 4.5 3 5.7V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.3c1.8-1.2 3-3.3 3-5.7a7 7 0 0 0-7-7z"></path><path d="M9 21h6"></path><path d="M10 17v-1.5a1.5 1.5 0 0 1 1-1.4"></path><path d="M14 17v-1.5a1.5 1.5 0 0 0-1-1.4"></path></svg>
@@ -1565,21 +1524,13 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </span>
-                            </template><span class="flex items-center justify-between w-full">
-                                    <span class="flex items-center gap-3">
-                                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-7 7c0 2.4 1.2 4.5 3 5.7V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.3c1.8-1.2 3-3.3 3-5.7a7 7 0 0 0-7-7z"></path><path d="M9 21h6"></path><path d="M10 17v-1.5a1.5 1.5 0 0 1 1-1.4"></path><path d="M14 17v-1.5a1.5 1.5 0 0 0-1-1.4"></path></svg>
-                                                                                <span>เบรนสตอร์ม</span>
-                                    </span>
-                                    <svg class="w-4 h-4 transition-transform duration-200 flex-shrink-0" :class="isGroupOpen(6) ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </span>
-                            <template x-if="!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen">
+                            </template>
+<template x-if="!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen">
                                 <span class="flex items-center justify-center">
                                                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-7 7c0 2.4 1.2 4.5 3 5.7V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.3c1.8-1.2 3-3.3 3-5.7a7 7 0 0 0-7-7z"></path><path d="M9 21h6"></path><path d="M10 17v-1.5a1.5 1.5 0 0 1 1-1.4"></path><path d="M14 17v-1.5a1.5 1.5 0 0 0-1-1.4"></path></svg>
                                                                     </span>
                             </template>
-                        </h2>
+</h2>
 
                         <!-- Menu Items (Collapsible) -->
                         <ul class="flex flex-col gap-1 mt-2" x-show="isGroupOpen(6) &amp;&amp; ($store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen)" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" style="display: none;">
@@ -1605,7 +1556,7 @@
                         <!-- Menu Group Title (Collapsible) -->
                         <h2 class="text-[16px] uppercase flex items-center leading-[20px] cursor-pointer select-none transition-all duration-200 menu-item !font-normal menu-item-inactive !text-gray-800 dark:!text-gray-200 justify-start" :class="(!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen) ?
                             'xl:justify-center' : 'justify-start'" @click="toggleGroup(7)">
-                            <template x-if="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen">
+<template x-if="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen">
                                 <span class="flex items-center justify-between w-full">
                                     <span class="flex items-center gap-3">
                                                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 3H21V16H3V3Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 16V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 21H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 8H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 11H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
@@ -1615,21 +1566,13 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </span>
-                            </template><span class="flex items-center justify-between w-full">
-                                    <span class="flex items-center gap-3">
-                                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 3H21V16H3V3Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 16V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 21H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 8H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 11H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                                                                                <span>จองห้องประชุม</span>
-                                    </span>
-                                    <svg class="w-4 h-4 transition-transform duration-200 flex-shrink-0" :class="isGroupOpen(7) ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </span>
-                            <template x-if="!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen">
+                            </template>
+<template x-if="!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen">
                                 <span class="flex items-center justify-center">
                                                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 3H21V16H3V3Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 16V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 21H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 8H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 11H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                                                                     </span>
                             </template>
-                        </h2>
+</h2>
 
                         <!-- Menu Items (Collapsible) -->
                         <ul class="flex flex-col gap-1 mt-2" x-show="isGroupOpen(7) &amp;&amp; ($store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen)" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" style="display: none;">
@@ -1735,7 +1678,7 @@
                         <!-- Menu Group Title (Collapsible) -->
                         <h2 class="text-[16px] uppercase flex items-center leading-[20px] cursor-pointer select-none transition-all duration-200 menu-item !font-normal menu-item-inactive !text-gray-800 dark:!text-gray-200 justify-start" :class="(!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen) ?
                             'xl:justify-center' : 'justify-start'" @click="toggleGroup(8)">
-                            <template x-if="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen">
+<template x-if="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen">
                                 <span class="flex items-center justify-between w-full">
                                     <span class="flex items-center gap-3">
                                                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 17H5C3.89543 17 3 16.1046 3 15V13C3 11.8954 3.89543 11 5 11H19C20.1046 11 21 11.8954 21 13V15C21 16.1046 20.1046 17 19 17Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5 11L7 6H17L19 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="7" cy="14" r="1.5" stroke="currentColor" stroke-width="1.5"></circle><circle cx="17" cy="14" r="1.5" stroke="currentColor" stroke-width="1.5"></circle><path d="M2 20H22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5 17V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M19 17V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
@@ -1745,21 +1688,13 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </span>
-                            </template><span class="flex items-center justify-between w-full">
-                                    <span class="flex items-center gap-3">
-                                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 17H5C3.89543 17 3 16.1046 3 15V13C3 11.8954 3.89543 11 5 11H19C20.1046 11 21 11.8954 21 13V15C21 16.1046 20.1046 17 19 17Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5 11L7 6H17L19 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="7" cy="14" r="1.5" stroke="currentColor" stroke-width="1.5"></circle><circle cx="17" cy="14" r="1.5" stroke="currentColor" stroke-width="1.5"></circle><path d="M2 20H22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5 17V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M19 17V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                                                                                <span>จองรถ</span>
-                                    </span>
-                                    <svg class="w-4 h-4 transition-transform duration-200 flex-shrink-0" :class="isGroupOpen(8) ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </span>
-                            <template x-if="!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen">
+                            </template>
+<template x-if="!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen">
                                 <span class="flex items-center justify-center">
                                                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 17H5C3.89543 17 3 16.1046 3 15V13C3 11.8954 3.89543 11 5 11H19C20.1046 11 21 11.8954 21 13V15C21 16.1046 20.1046 17 19 17Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5 11L7 6H17L19 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="7" cy="14" r="1.5" stroke="currentColor" stroke-width="1.5"></circle><circle cx="17" cy="14" r="1.5" stroke="currentColor" stroke-width="1.5"></circle><path d="M2 20H22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5 17V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M19 17V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                                                                     </span>
                             </template>
-                        </h2>
+</h2>
 
                         <!-- Menu Items (Collapsible) -->
                         <ul class="flex flex-col gap-1 mt-2" x-show="isGroupOpen(8) &amp;&amp; ($store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen)" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" style="display: none;">
@@ -1849,7 +1784,7 @@
                         <!-- Menu Group Title (Collapsible) -->
                         <h2 class="text-[16px] uppercase flex items-center leading-[20px] cursor-pointer select-none transition-all duration-200 menu-item !font-normal menu-item-inactive !text-gray-800 dark:!text-gray-200 justify-start" :class="(!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen) ?
                             'xl:justify-center' : 'justify-start'" @click="toggleGroup(9)">
-                            <template x-if="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen">
+<template x-if="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen">
                                 <span class="flex items-center justify-between w-full">
                                     <span class="flex items-center gap-3">
                                                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
@@ -1859,21 +1794,13 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </span>
-                            </template><span class="flex items-center justify-between w-full">
-                                    <span class="flex items-center gap-3">
-                                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                                                                                <span>คุณภาพอากาศ</span>
-                                    </span>
-                                    <svg class="w-4 h-4 transition-transform duration-200 flex-shrink-0" :class="isGroupOpen(9) ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </span>
-                            <template x-if="!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen">
+                            </template>
+<template x-if="!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen">
                                 <span class="flex items-center justify-center">
                                                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                                                                     </span>
                             </template>
-                        </h2>
+</h2>
 
                         <!-- Menu Items (Collapsible) -->
                         <ul class="flex flex-col gap-1 mt-2" x-show="isGroupOpen(9) &amp;&amp; ($store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen)" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" style="display: none;">
@@ -1963,7 +1890,7 @@
                         <!-- Menu Group Title (Collapsible) -->
                         <h2 class="text-[16px] uppercase flex items-center leading-[20px] cursor-pointer select-none transition-all duration-200 menu-item !font-normal menu-item-inactive !text-gray-800 dark:!text-gray-200 justify-start" :class="(!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen) ?
                             'xl:justify-center' : 'justify-start'" @click="toggleGroup(10)">
-                            <template x-if="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen">
+<template x-if="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen">
                                 <span class="flex items-center justify-between w-full">
                                     <span class="flex items-center gap-3">
                                                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
@@ -1973,21 +1900,13 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </span>
-                            </template><span class="flex items-center justify-between w-full">
-                                    <span class="flex items-center gap-3">
-                                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
-                                                                                <span>คุณภาพเสียง</span>
-                                    </span>
-                                    <svg class="w-4 h-4 transition-transform duration-200 flex-shrink-0" :class="isGroupOpen(10) ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </span>
-                            <template x-if="!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen">
+                            </template>
+<template x-if="!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen">
                                 <span class="flex items-center justify-center">
                                                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
                                                                     </span>
                             </template>
-                        </h2>
+</h2>
 
                         <!-- Menu Items (Collapsible) -->
                         <ul class="flex flex-col gap-1 mt-2" x-show="isGroupOpen(10) &amp;&amp; ($store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen)" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" style="display: none;">
@@ -2025,7 +1944,7 @@
                                                                     </li>
                                                             <li>
                                                                             <!-- Simple Menu Item -->
-                                        <a href="/Mockup/pages/noise-monitor-sync/index.html" class="menu-item group js-sidebar-link pl-12 menu-item-inactive justify-start" data-menu-name="ดึงข้อมูลคุณภาพเสียง" data-menu-group="คุณภาพเสียง" :class="[
+                                        <a href="/Mockup/pages/dashboard-noise-quality/index.html" class="menu-item group js-sidebar-link pl-12 menu-item-inactive justify-start" data-menu-name="ดึงข้อมูลคุณภาพเสียง" data-menu-group="คุณภาพเสียง" :class="[
                                                 isActive('/noise-monitor-sync', false) ? 'menu-item-active' :
                                                 'menu-item-inactive',
                                                 (!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen) ?
@@ -2045,7 +1964,7 @@
                         <!-- Menu Group Title (Collapsible) -->
                         <h2 class="text-[16px] uppercase flex items-center leading-[20px] cursor-pointer select-none transition-all duration-200 menu-item !font-normal menu-item-inactive !text-gray-800 dark:!text-gray-200 justify-start" :class="(!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen) ?
                             'xl:justify-center' : 'justify-start'" @click="toggleGroup(11)">
-                            <template x-if="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen">
+<template x-if="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen">
                                 <span class="flex items-center justify-between w-full">
                                     <span class="flex items-center gap-3">
                                                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
@@ -2055,21 +1974,13 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </span>
-                            </template><span class="flex items-center justify-between w-full">
-                                    <span class="flex items-center gap-3">
-                                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
-                                                                                <span>คุณภาพน้ำ</span>
-                                    </span>
-                                    <svg class="w-4 h-4 transition-transform duration-200 flex-shrink-0" :class="isGroupOpen(11) ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </span>
-                            <template x-if="!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen">
+                            </template>
+<template x-if="!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen">
                                 <span class="flex items-center justify-center">
                                                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
                                                                     </span>
                             </template>
-                        </h2>
+</h2>
 
                         <!-- Menu Items (Collapsible) -->
                         <ul class="flex flex-col gap-1 mt-2" x-show="isGroupOpen(11) &amp;&amp; ($store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen)" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" style="display: none;">
@@ -2123,200 +2034,7 @@
                                                                     </li>
                                                     </ul>
                     </div>
-                                                        <div>
-                        <!-- Menu Group Title (Collapsible) -->
-                        <h2 class="text-[16px] uppercase flex items-center leading-[20px] cursor-pointer select-none transition-all duration-200 menu-item !font-normal menu-item-inactive !text-gray-800 dark:!text-gray-200 justify-start" :class="(!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen) ?
-                            'xl:justify-center' : 'justify-start'" @click="toggleGroup(12)">
-                            <template x-if="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen">
-                                <span class="flex items-center justify-between w-full">
-                                    <span class="flex items-center gap-3">
-                                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.50391 4.25C8.50391 3.83579 8.83969 3.5 9.25391 3.5H15.2777C15.4766 3.5 15.6674 3.57902 15.8081 3.71967L18.2807 6.19234C18.4214 6.333 18.5004 6.52376 18.5004 6.72268V16.75C18.5004 17.1642 18.1646 17.5 17.7504 17.5H16.248V17.4993H14.748V17.5H9.25391C8.83969 17.5 8.50391 17.1642 8.50391 16.75V4.25ZM14.748 19H9.25391C8.01126 19 7.00391 17.9926 7.00391 16.75V6.49854H6.24805C5.83383 6.49854 5.49805 6.83432 5.49805 7.24854V19.75C5.49805 20.1642 5.83383 20.5 6.24805 20.5H13.998C14.4123 20.5 14.748 20.1642 14.748 19.75L14.748 19ZM7.00391 4.99854V4.25C7.00391 3.00736 8.01127 2 9.25391 2H15.2777C15.8745 2 16.4468 2.23705 16.8687 2.659L19.3414 5.13168C19.7634 5.55364 20.0004 6.12594 20.0004 6.72268V16.75C20.0004 17.9926 18.9931 19 17.7504 19H16.248L16.248 19.75C16.248 20.9926 15.2407 22 13.998 22H6.24805C5.00541 22 3.99805 20.9926 3.99805 19.75V7.24854C3.99805 6.00589 5.00541 4.99854 6.24805 4.99854H7.00391Z" fill="currentColor"></path></svg>
-                                                                                <span>เว็บไซต์</span>
-                                    </span>
-                                    <svg class="w-4 h-4 transition-transform duration-200 flex-shrink-0" :class="isGroupOpen(12) ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </span>
-                            </template><span class="flex items-center justify-between w-full">
-                                    <span class="flex items-center gap-3">
-                                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.50391 4.25C8.50391 3.83579 8.83969 3.5 9.25391 3.5H15.2777C15.4766 3.5 15.6674 3.57902 15.8081 3.71967L18.2807 6.19234C18.4214 6.333 18.5004 6.52376 18.5004 6.72268V16.75C18.5004 17.1642 18.1646 17.5 17.7504 17.5H16.248V17.4993H14.748V17.5H9.25391C8.83969 17.5 8.50391 17.1642 8.50391 16.75V4.25ZM14.748 19H9.25391C8.01126 19 7.00391 17.9926 7.00391 16.75V6.49854H6.24805C5.83383 6.49854 5.49805 6.83432 5.49805 7.24854V19.75C5.49805 20.1642 5.83383 20.5 6.24805 20.5H13.998C14.4123 20.5 14.748 20.1642 14.748 19.75L14.748 19ZM7.00391 4.99854V4.25C7.00391 3.00736 8.01127 2 9.25391 2H15.2777C15.8745 2 16.4468 2.23705 16.8687 2.659L19.3414 5.13168C19.7634 5.55364 20.0004 6.12594 20.0004 6.72268V16.75C20.0004 17.9926 18.9931 19 17.7504 19H16.248L16.248 19.75C16.248 20.9926 15.2407 22 13.998 22H6.24805C5.00541 22 3.99805 20.9926 3.99805 19.75V7.24854C3.99805 6.00589 5.00541 4.99854 6.24805 4.99854H7.00391Z" fill="currentColor"></path></svg>
-                                                                                <span>เว็บไซต์</span>
-                                    </span>
-                                    <svg class="w-4 h-4 transition-transform duration-200 flex-shrink-0" :class="isGroupOpen(12) ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </span>
-                            <template x-if="!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen">
-                                <span class="flex items-center justify-center">
-                                                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.50391 4.25C8.50391 3.83579 8.83969 3.5 9.25391 3.5H15.2777C15.4766 3.5 15.6674 3.57902 15.8081 3.71967L18.2807 6.19234C18.4214 6.333 18.5004 6.52376 18.5004 6.72268V16.75C18.5004 17.1642 18.1646 17.5 17.7504 17.5H16.248V17.4993H14.748V17.5H9.25391C8.83969 17.5 8.50391 17.1642 8.50391 16.75V4.25ZM14.748 19H9.25391C8.01126 19 7.00391 17.9926 7.00391 16.75V6.49854H6.24805C5.83383 6.49854 5.49805 6.83432 5.49805 7.24854V19.75C5.49805 20.1642 5.83383 20.5 6.24805 20.5H13.998C14.4123 20.5 14.748 20.1642 14.748 19.75L14.748 19ZM7.00391 4.99854V4.25C7.00391 3.00736 8.01127 2 9.25391 2H15.2777C15.8745 2 16.4468 2.23705 16.8687 2.659L19.3414 5.13168C19.7634 5.55364 20.0004 6.12594 20.0004 6.72268V16.75C20.0004 17.9926 18.9931 19 17.7504 19H16.248L16.248 19.75C16.248 20.9926 15.2407 22 13.998 22H6.24805C5.00541 22 3.99805 20.9926 3.99805 19.75V7.24854C3.99805 6.00589 5.00541 4.99854 6.24805 4.99854H7.00391Z" fill="currentColor"></path></svg>
-                                                                    </span>
-                            </template>
-                        </h2>
-
-                        <!-- Menu Items (Collapsible) -->
-                        <ul class="flex flex-col gap-1 mt-2" x-show="isGroupOpen(12) &amp;&amp; ($store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen)" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" style="display: none;">
-                                                            <li>
-                                                                            <!-- Simple Menu Item -->
-                                        <a href="/Mockup/pages/publications/index.html" class="menu-item group js-sidebar-link pl-12 menu-item-inactive justify-start" data-menu-name="ข้อมูล" data-menu-group="เว็บไซต์" :class="[
-                                                isActive('/publications', false) ? 'menu-item-active' :
-                                                'menu-item-inactive',
-                                                (!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen) ?
-                                                'xl:justify-center' :
-                                                'justify-start'
-                                            ]">
-
-                                            <!-- Text -->
-                                            <span x-show="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen" class="menu-item-text flex items-center gap-2">
-                                                ข้อมูล
-                                                                                            </span>
-                                        </a>
-                                                                    </li>
-                                                            <li>
-                                                                            <!-- Simple Menu Item -->
-                                        <a href="/Mockup/pages/publication-categories/index.html" class="menu-item group js-sidebar-link pl-12 menu-item-inactive justify-start" data-menu-name="หมวดหมู่ข้อมูล" data-menu-group="เว็บไซต์" :class="[
-                                                isActive('/publication-categories', false) ? 'menu-item-active' :
-                                                'menu-item-inactive',
-                                                (!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen) ?
-                                                'xl:justify-center' :
-                                                'justify-start'
-                                            ]">
-
-                                            <!-- Text -->
-                                            <span x-show="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen" class="menu-item-text flex items-center gap-2">
-                                                หมวดหมู่ข้อมูล
-                                                                                            </span>
-                                        </a>
-                                                                    </li>
-                                                            <li>
-                                                                            <!-- Simple Menu Item -->
-                                        <a href="/Mockup/pages/news/index.html" class="menu-item group js-sidebar-link pl-12 menu-item-inactive justify-start" data-menu-name="ข่าวประชาสัมพันธ์" data-menu-group="เว็บไซต์" :class="[
-                                                isActive('/news', false) ? 'menu-item-active' :
-                                                'menu-item-inactive',
-                                                (!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen) ?
-                                                'xl:justify-center' :
-                                                'justify-start'
-                                            ]">
-
-                                            <!-- Text -->
-                                            <span x-show="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen" class="menu-item-text flex items-center gap-2">
-                                                ข่าวประชาสัมพันธ์
-                                                                                            </span>
-                                        </a>
-                                                                    </li>
-                                                            <li>
-                                                                            <!-- Simple Menu Item -->
-                                        <a href="/Mockup/pages/news-categories/index.html" class="menu-item group js-sidebar-link pl-12 menu-item-inactive justify-start" data-menu-name="หมวดหมู่ข่าว" data-menu-group="เว็บไซต์" :class="[
-                                                isActive('/news-categories', false) ? 'menu-item-active' :
-                                                'menu-item-inactive',
-                                                (!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen) ?
-                                                'xl:justify-center' :
-                                                'justify-start'
-                                            ]">
-
-                                            <!-- Text -->
-                                            <span x-show="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen" class="menu-item-text flex items-center gap-2">
-                                                หมวดหมู่ข่าว
-                                                                                            </span>
-                                        </a>
-                                                                    </li>
-                                                            <li>
-                                                                            <!-- Simple Menu Item -->
-                                        <a href="/Mockup/pages/web-menus/index.html" class="menu-item group js-sidebar-link pl-12 menu-item-inactive justify-start" data-menu-name="จัดการเมนูเว็บไซต์" data-menu-group="เว็บไซต์" :class="[
-                                                isActive('/web-menus', false) ? 'menu-item-active' :
-                                                'menu-item-inactive',
-                                                (!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen) ?
-                                                'xl:justify-center' :
-                                                'justify-start'
-                                            ]">
-
-                                            <!-- Text -->
-                                            <span x-show="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen" class="menu-item-text flex items-center gap-2">
-                                                จัดการเมนูเว็บไซต์
-                                                                                            </span>
-                                        </a>
-                                                                    </li>
-                                                            <li>
-                                                                            <!-- Simple Menu Item -->
-                                        <a href="/Mockup/pages/slides/index.html" class="menu-item group js-sidebar-link pl-12 menu-item-inactive justify-start" data-menu-name="จัดการสไลด์" data-menu-group="เว็บไซต์" :class="[
-                                                isActive('/slides', false) ? 'menu-item-active' :
-                                                'menu-item-inactive',
-                                                (!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen) ?
-                                                'xl:justify-center' :
-                                                'justify-start'
-                                            ]">
-
-                                            <!-- Text -->
-                                            <span x-show="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen" class="menu-item-text flex items-center gap-2">
-                                                จัดการสไลด์
-                                                                                            </span>
-                                        </a>
-                                                                    </li>
-                                                            <li>
-                                                                            <!-- Simple Menu Item -->
-                                        <a href="/Mockup/pages/executives/index.html" class="menu-item group js-sidebar-link pl-12 menu-item-inactive justify-start" data-menu-name="รูปภาพผู้บริหาร" data-menu-group="เว็บไซต์" :class="[
-                                                isActive('/executives', false) ? 'menu-item-active' :
-                                                'menu-item-inactive',
-                                                (!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen) ?
-                                                'xl:justify-center' :
-                                                'justify-start'
-                                            ]">
-
-                                            <!-- Text -->
-                                            <span x-show="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen" class="menu-item-text flex items-center gap-2">
-                                                รูปภาพผู้บริหาร
-                                                                                            </span>
-                                        </a>
-                                                                    </li>
-                                                            <li>
-                                                                            <!-- Simple Menu Item -->
-                                        <a href="/Mockup/pages/quick-links/index.html" class="menu-item group js-sidebar-link pl-12 menu-item-inactive justify-start" data-menu-name="จัดการลิงก์ด่วน" data-menu-group="เว็บไซต์" :class="[
-                                                isActive('/quick-links', false) ? 'menu-item-active' :
-                                                'menu-item-inactive',
-                                                (!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen) ?
-                                                'xl:justify-center' :
-                                                'justify-start'
-                                            ]">
-
-                                            <!-- Text -->
-                                            <span x-show="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen" class="menu-item-text flex items-center gap-2">
-                                                จัดการลิงก์ด่วน
-                                                                                            </span>
-                                        </a>
-                                                                    </li>
-                                                            <li>
-                                                                            <!-- Simple Menu Item -->
-                                        <a href="/Mockup/pages/surveys/summary/index.html" class="menu-item group js-sidebar-link pl-12 menu-item-inactive justify-start" data-menu-name="สรุปผลแบบสอบถาม" data-menu-group="เว็บไซต์" :class="[
-                                                isActive('/surveys/summary', false) ? 'menu-item-active' :
-                                                'menu-item-inactive',
-                                                (!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen) ?
-                                                'xl:justify-center' :
-                                                'justify-start'
-                                            ]">
-
-                                            <!-- Text -->
-                                            <span x-show="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen" class="menu-item-text flex items-center gap-2">
-                                                สรุปผลแบบสอบถาม
-                                                                                            </span>
-                                        </a>
-                                                                    </li>
-                                                            <li>
-                                                                            <!-- Simple Menu Item -->
-                                        <a href="/Mockup/pages/egp-sync/index.html" class="menu-item group js-sidebar-link pl-12 menu-item-inactive justify-start" data-menu-name="ดึงข้อมูลจัดซื้อจัดจ้าง" data-menu-group="เว็บไซต์" :class="[
-                                                isActive('/egp-sync', false) ? 'menu-item-active' :
-                                                'menu-item-inactive',
-                                                (!$store.sidebar.isExpanded &amp;&amp; !$store.sidebar.isHovered &amp;&amp; !$store.sidebar.isMobileOpen) ?
-                                                'xl:justify-center' :
-                                                'justify-start'
-                                            ]">
-
-                                            <!-- Text -->
-                                            <span x-show="$store.sidebar.isExpanded || $store.sidebar.isHovered || $store.sidebar.isMobileOpen" class="menu-item-text flex items-center gap-2">
-                                                ดึงข้อมูลจัดซื้อจัดจ้าง
-                                                                                            </span>
-                                        </a>
-                                                                    </li>
-                                                    </ul>
-                    </div>
+                                                        
                             </div>
         </nav>
 
@@ -2743,7 +2461,7 @@ function chatDropdown() {
             <template x-if="!loading &amp;&amp; notifications.length &gt; 0">
                 <template x-for="notification in notifications" :key="notification.id">
                     <li>
-                        <a :href="/Mockup/pages/notification.action_url ||/index.html"#'" class="w-full text-left flex gap-3 p-3 hover:bg-gray-100 dark:hover:bg-white/5 cursor-pointer transition-colors border-b border-gray-100 dark:border-gray-800 last:border-b-0" :class="{ 'bg-blue-50/50 dark:bg-blue-900/10': !notification.is_read }" @click="handleNotificationClick($event, notification)">
+                        <a :href="#"#'" class="w-full text-left flex gap-3 p-3 hover:bg-gray-100 dark:hover:bg-white/5 cursor-pointer transition-colors border-b border-gray-100 dark:border-gray-800 last:border-b-0" :class="{ 'bg-blue-50/50 dark:bg-blue-900/10': !notification.is_read }" @click="handleNotificationClick($event, notification)">
                             <!-- Icon -->
                             <span class="flex items-center justify-center w-10 h-10 rounded-full shrink-0" :class="notification.color_class">
                                 <!-- Meeting Room Booking -->
@@ -3001,7 +2719,7 @@ function notificationDropdown() {
 </script>
 
                 
-                <a href="/Mockup/pages/logout/index.html" class="relative flex items-center justify-center text-gray-500 transition-colors bg-white border border-gray-200 rounded-full hover:text-dark-900 h-11 w-11 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white" aria-label="ออกจากระบบ" title="ออกจากระบบ">
+                <a href="/Mockup/pages/logout/index.html" data-demo-missing="1" class="relative flex items-center justify-center text-gray-500 transition-colors bg-white border border-gray-200 rounded-full hover:text-dark-900 h-11 w-11 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white" aria-label="ออกจากระบบ" title="ออกจากระบบ">
                     <svg class="block w-5 h-5" style="transform: translateX(1px);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
                         <polyline points="16 17 21 12 16 7"></polyline>
@@ -3585,7 +3303,7 @@ function appsHomePage() {
                 <div class="hidden sm:block w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-600"></div>
 
                 <!-- Policy Link -->
-                <a href="/Mockup/pages/files/policy/Privacy Policy.pdf/index.html" target="_blank" class="inline-flex items-center gap-1.5 text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors font-medium">
+                <a href="/Mockup/pages/files/policy/Privacy Policy.pdf/index.html" data-demo-missing="1" target="_blank" class="inline-flex items-center gap-1.5 text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors font-medium">
                     <svg class="w-4 h-4 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                     </svg>
@@ -5644,7 +5362,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     
             
-    <script src="/Mockup/livewire-be6b6f14/livewire.min.js?id=8f29b734" data-csrf="3BmksytZoVShfQYoNZ9sJ58Zve6a4fkyXE9YK8IC" data-module-url="/livewire-be6b6f14" data-update-uri="/livewire-be6b6f14/update" data-navigate-once="true"></script>
+    
     
     
             <div id="chat-toast-container" style="position:fixed;bottom:100px;right:24px;z-index:9999;display:flex;flex-direction:column-reverse;gap:12px;pointer-events:none;"></div>
@@ -6473,7 +6191,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 greetingBubble.classList.remove('hiding');
                 greetingBubble.innerHTML = `
                     <div style="display:flex;align-items:center;padding:2px 0;">
-                        <img src="/Mockup/pages/${selectedPersona.avatar}/index.html" class="chatbot-greeting-avatar" alt="">
+                        <img src="#" class="chatbot-greeting-avatar" alt="">
                         <div class="chatbot-typing-dots"><span></span><span></span><span></span></div>
                     </div>
                 `;
@@ -6485,7 +6203,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     greetingBubble.innerHTML = `
                         <button class="chatbot-greeting-close" onclick="event.stopPropagation(); hideGreetingBubble();" aria-label="ปิด">✕</button>
                         <div style="display:flex;align-items:flex-start;">
-                            <img src="/Mockup/pages/${selectedPersona.avatar}/index.html" class="chatbot-greeting-avatar" alt="">
+                            <img src="#" class="chatbot-greeting-avatar" alt="">
                             <div>
                                 <div class="chatbot-greeting-name" style="color:${selectedPersona.color};">
                                     ${selectedPersona.name}
@@ -6679,7 +6397,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 messages.innerHTML = `
                     <div class="flex gap-3" data-message="true">
                         <div class="w-8 h-8 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
-                            <img src="/Mockup/pages/${selectedPersona.avatar}/index.html" alt="AI" class="w-full h-full object-cover">
+                            <img src="#" alt="AI" class="w-full h-full object-cover">
                         </div>
                         <div class="bg-gray-100 dark:bg-gray-700 rounded-2xl rounded-tl-none px-4 py-3 max-w-[80%]">
                             <div class="flex items-start gap-2">
@@ -6793,7 +6511,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const top = escapeHtml(meme.top || 'มงคล');
                 const bottom = escapeHtml(meme.bottom || '');
                 const alt = escapeHtml(meme.alt || `${meme.top || ''} ${meme.bottom || ''}`.trim());
-                return `<figure class="mongkol-meme" data-meme="${escapeHtml(meme.slug || '')}" aria-label="${alt}"><div class="mongkol-meme-stage"><img src="/Mockup/pages/${mongkolMemeAvatar}/index.html" alt="${alt}" loading="lazy"><div class="mongkol-meme-caption top">${top}</div><div class="mongkol-meme-caption bottom">${bottom}</div></div><figcaption class="mongkol-meme-footer">มีมมงคล · ${alt}</figcaption></figure>`;
+                return `<figure class="mongkol-meme" data-meme="${escapeHtml(meme.slug || '')}" aria-label="${alt}"><div class="mongkol-meme-stage"><img src="#" alt="${alt}" loading="lazy"><div class="mongkol-meme-caption top">${top}</div><div class="mongkol-meme-caption bottom">${bottom}</div></div><figcaption class="mongkol-meme-footer">มีมมงคล · ${alt}</figcaption></figure>`;
             }
 
             function ensureMemeTagIfRequested(userText, botText) {
@@ -7519,13 +7237,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Italic (*)
                 formatted = formatted.replace(/\*(.+?)\*/g, '<em>$1</em>');
                 // Markdown links [text](url) - parse before raw URL detection (supports absolute and relative urls)
-                formatted = formatted.replace(/\[([^\]]+)\]\(((?:https?:\/\/|\/)[^)]+)\)/g, '<a href="/Mockup/pages/$2/index.html" target="_blank" rel="noopener" class="text-blue-600 dark:text-blue-400 underline break-all">$1</a>');
+                formatted = formatted.replace(/\[([^\]]+)\]\(((?:https?:\/\/|\/)[^)]+)\)/g, '<a href="#" target="_blank" rel="noopener" class="text-blue-600 dark:text-blue-400 underline break-all">$1</a>');
                 // Image URLs from gallery
                 formatted = formatted.replace(/(https?:\/\/[^\s<]+?\.(?:jpg|jpeg|png|gif|webp))(?:\?[^<\s]*)?(?![^<]*>|[^<>]*<\/a>)/gi, function(url) {
                     return '<a href="' + url + '" target="_blank" rel="noopener" class="text-blue-600 dark:text-blue-400 underline break-all">' + url + '</a><br><button type="button" data-chatbot-image-url="' + url + '" title="คลิกเพื่อดูรูปภาพ" class="inline-block mt-2 cursor-zoom-in text-left"><img src="' + url + '" alt="ภาพตัวอย่าง" class="max-h-40 rounded-lg border border-gray-200 object-cover transition hover:opacity-90 dark:border-gray-600"></button>';
                 });
                 // Links (raw URLs not already inside an <a> tag)
-                formatted = formatted.replace(/(https?:\/\/[^\s<]+)(?![^<]*>|[^<>]*<\/a>)/gi, '<a href="/Mockup/pages/$1/index.html" target="_blank" rel="noopener" class="text-blue-600 dark:text-blue-400 underline break-all">$1</a>');
+                formatted = formatted.replace(/(https?:\/\/[^\s<]+)(?![^<]*>|[^<>]*<\/a>)/gi, '<a href="#" target="_blank" rel="noopener" class="text-blue-600 dark:text-blue-400 underline break-all">$1</a>');
                 // Line breaks
                 formatted = formatted.replace(/\n/g, '<br>');
 
@@ -7608,7 +7326,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 } else {
                     messageDiv.innerHTML = `
                         <div class="w-8 h-8 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
-                            <img src="/Mockup/pages/${selectedPersona.avatar}/index.html" alt="AI" class="w-full h-full object-cover">
+                            <img src="#" alt="AI" class="w-full h-full object-cover">
                         </div>
                         <div class="bg-gray-100 dark:bg-gray-700 rounded-2xl rounded-tl-none px-4 py-3 max-w-[80%]">
                             <div class="flex items-start gap-2">
@@ -7642,7 +7360,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 typingDiv.className = 'flex gap-3';
                 typingDiv.innerHTML = `
                     <div class="w-8 h-8 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
-                        <img src="/Mockup/pages/${selectedPersona.avatar}/index.html" alt="AI" class="w-full h-full object-cover">
+                        <img src="#" alt="AI" class="w-full h-full object-cover">
                     </div>
                     <div class="bg-gray-100 dark:bg-gray-700 rounded-2xl rounded-tl-none px-4 py-3">
                         <div class="flex gap-1 items-center h-5">
