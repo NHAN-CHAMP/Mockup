@@ -30,10 +30,11 @@ function cleanAlpineClones(html) {
   });
 }
 
-function injectScripts(html) {
+function injectScripts(html, pathname = '/') {
   const base = (process.env.MOCKUP_BASE_PATH || '/Mockup').replace(/\/$/, '');
-  const inject = `
-<script src="${base}/shared/demo-banner.js?v=20260914b"></script>
+  const isHome = pathname === '/' || pathname === '/apps';
+  const banner = isHome ? `\n<script src="${base}/shared/demo-banner.js?v=20260914c"></script>` : '';
+  const inject = `${banner}
 <script src="${base}/shared/demo-intercept.js"></script>`;
   if (html.includes('</body>')) {
     return html.replace('</body>', inject + '\n</body>');
@@ -119,7 +120,7 @@ async function main() {
       }
       let html = await page.content();
       html = cleanAlpineClones(html);
-      html = injectScripts(html);
+      html = injectScripts(html, pathname);
       fs.writeFileSync(outFile, html, 'utf8');
       console.log('Saved', pathname, '→', path.relative(root, outFile));
     } catch (e) {
