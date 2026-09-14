@@ -1,0 +1,120 @@
+{
+    "version": 1,
+    "note": "status: pending | in_progress | complete — ข้อมูลจำลองเท่านั้น",
+    "modules": [
+        {
+            "id": "launcher",
+            "name": "หน้าหลัก \/ Launcher",
+            "minRecords": "apps + widgets",
+            "status": "pending"
+        },
+        {
+            "id": "dashboard-user",
+            "name": "แดชบอร์ดผู้ใช้",
+            "status": "pending"
+        },
+        {
+            "id": "phonebook",
+            "name": "สมุดโทรศัพท์",
+            "minRecords": 20,
+            "status": "pending"
+        },
+        {
+            "id": "staff",
+            "name": "ข้อมูลบุคลากร",
+            "status": "pending"
+        },
+        {
+            "id": "onepage",
+            "name": "Onepage",
+            "minRecords": 5,
+            "status": "pending"
+        },
+        {
+            "id": "presentations",
+            "name": "นำเสนอข้อมูล",
+            "status": "pending"
+        },
+        {
+            "id": "social-listening",
+            "name": "ข่าวสิ่งแวดล้อม",
+            "minRecords": 10,
+            "status": "pending"
+        },
+        {
+            "id": "forum",
+            "name": "คลังความรู้",
+            "status": "pending"
+        },
+        {
+            "id": "brainstorm",
+            "name": "เบรนสตอร์ม",
+            "minRecords": 3,
+            "status": "pending"
+        },
+        {
+            "id": "meeting",
+            "name": "จองห้องประชุม",
+            "minRecords": 10,
+            "status": "in_progress"
+        },
+        {
+            "id": "vehicle",
+            "name": "จองรถ",
+            "minRecords": 10,
+            "status": "in_progress"
+        },
+        {
+            "id": "air-quality",
+            "name": "คุณภาพอากาศ",
+            "status": "in_progress"
+        },
+        {
+            "id": "noise",
+            "name": "คุณภาพเสียง",
+            "status": "pending"
+        },
+        {
+            "id": "water",
+            "name": "คุณภาพน้ำ",
+            "status": "pending"
+        },
+        {
+            "id": "chat",
+            "name": "แชท",
+            "status": "pending"
+        },
+        {
+            "id": "albums",
+            "name": "คลังภาพ",
+            "status": "pending"
+        },
+        {
+            "id": "short-links",
+            "name": "ลิงก์\/QR",
+            "status": "pending"
+        },
+        {
+            "id": "attendance",
+            "name": "ลงเวลา",
+            "status": "pending"
+        },
+        {
+            "id": "rewards",
+            "name": "จับรางวัล",
+            "status": "pending"
+        },
+        {
+            "id": "games",
+            "name": "เกม",
+            "status": "pending"
+        },
+        {
+            "id": "admin",
+            "name": "ผู้ดูแลระบบ",
+            "status": "pending"
+        }
+    ],
+    "last_manifest_export": "2026-09-14T15:28:18+07:00",
+    "url_count": 74
+}

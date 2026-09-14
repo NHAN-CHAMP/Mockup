@@ -1,0 +1,747 @@
+{
+    "generated_at": "2026-09-14T15:28:18+07:00",
+    "exclude_groups": [
+        "เว็บไซต์"
+    ],
+    "exclude_note": "No pcdweb; synthetic data only via DemoDatabaseSeeder",
+    "urls": [
+        {
+            "path": "\/apps",
+            "source": "manifest"
+        },
+        {
+            "path": "\/dashboard",
+            "source": "manifest"
+        },
+        {
+            "path": "\/phonebook",
+            "source": "manifest"
+        },
+        {
+            "path": "\/onepages",
+            "source": "manifest"
+        },
+        {
+            "path": "\/social-listening\/contents",
+            "source": "manifest"
+        },
+        {
+            "path": "\/brainstorming",
+            "source": "manifest"
+        },
+        {
+            "path": "\/presentations",
+            "source": "manifest"
+        },
+        {
+            "path": "\/meeting-room-bookings",
+            "source": "manifest"
+        },
+        {
+            "path": "\/vehicle-bookings",
+            "source": "manifest"
+        },
+        {
+            "path": "\/chat",
+            "source": "manifest"
+        },
+        {
+            "path": "\/albums",
+            "source": "manifest"
+        },
+        {
+            "path": "\/forum",
+            "source": "manifest"
+        },
+        {
+            "path": "\/short-links",
+            "source": "manifest"
+        },
+        {
+            "path": "\/attendance",
+            "source": "manifest"
+        },
+        {
+            "path": "\/reward-activities",
+            "source": "manifest"
+        },
+        {
+            "path": "\/game",
+            "source": "manifest"
+        },
+        {
+            "path": "\/dashboard-admin",
+            "source": "manifest"
+        },
+        {
+            "path": "\/agencies",
+            "source": "manifest"
+        },
+        {
+            "path": "\/departments",
+            "source": "manifest"
+        },
+        {
+            "path": "\/roles",
+            "source": "manifest"
+        },
+        {
+            "path": "\/permissions",
+            "source": "manifest"
+        },
+        {
+            "path": "\/user-roles",
+            "source": "manifest"
+        },
+        {
+            "path": "\/notifications\/page",
+            "source": "manifest"
+        },
+        {
+            "path": "\/chat\/overview",
+            "source": "manifest"
+        },
+        {
+            "path": "\/short-links\/overview",
+            "source": "manifest"
+        },
+        {
+            "path": "\/activity-logs",
+            "source": "manifest"
+        },
+        {
+            "path": "\/analytics",
+            "source": "manifest"
+        },
+        {
+            "path": "\/attendance-reports",
+            "source": "manifest"
+        },
+        {
+            "path": "\/attendance-records",
+            "source": "manifest"
+        },
+        {
+            "path": "\/documents",
+            "source": "manifest"
+        },
+        {
+            "path": "\/backups",
+            "source": "manifest"
+        },
+        {
+            "path": "\/announcements",
+            "source": "manifest"
+        },
+        {
+            "path": "\/trash",
+            "source": "manifest"
+        },
+        {
+            "path": "\/admin\/reward-activities",
+            "source": "manifest"
+        },
+        {
+            "path": "\/admin\/game",
+            "source": "manifest"
+        },
+        {
+            "path": "\/dashboard-staff",
+            "source": "manifest"
+        },
+        {
+            "path": "\/staff",
+            "source": "manifest"
+        },
+        {
+            "path": "\/ad-users",
+            "source": "manifest"
+        },
+        {
+            "path": "\/staff-change-requests",
+            "source": "manifest"
+        },
+        {
+            "path": "\/dashboard-onepage",
+            "source": "manifest"
+        },
+        {
+            "path": "\/onepage-categories",
+            "source": "manifest"
+        },
+        {
+            "path": "\/social-listening\/dashboard",
+            "source": "manifest"
+        },
+        {
+            "path": "\/social-listening\/sources",
+            "source": "manifest"
+        },
+        {
+            "path": "\/social-listening\/keywords",
+            "source": "manifest"
+        },
+        {
+            "path": "\/social-listening\/categories",
+            "source": "manifest"
+        },
+        {
+            "path": "\/social-listening\/scrape",
+            "source": "manifest"
+        },
+        {
+            "path": "\/dashboard-forum",
+            "source": "manifest"
+        },
+        {
+            "path": "\/forum-categories",
+            "source": "manifest"
+        },
+        {
+            "path": "\/forum-tags",
+            "source": "manifest"
+        },
+        {
+            "path": "\/brainstorming\/dashboard",
+            "source": "manifest"
+        },
+        {
+            "path": "\/dashboard-meeting",
+            "source": "manifest"
+        },
+        {
+            "path": "\/meeting-room-catering",
+            "source": "manifest"
+        },
+        {
+            "path": "\/meeting-room-manage",
+            "source": "manifest"
+        },
+        {
+            "path": "\/meeting-rooms",
+            "source": "manifest"
+        },
+        {
+            "path": "\/lunches",
+            "source": "manifest"
+        },
+        {
+            "path": "\/snacks",
+            "source": "manifest"
+        },
+        {
+            "path": "\/dashboard-vehicle",
+            "source": "manifest"
+        },
+        {
+            "path": "\/vehicle-manage",
+            "source": "manifest"
+        },
+        {
+            "path": "\/drivers",
+            "source": "manifest"
+        },
+        {
+            "path": "\/vehicle-types",
+            "source": "manifest"
+        },
+        {
+            "path": "\/vehicles",
+            "source": "manifest"
+        },
+        {
+            "path": "\/air-quality-check",
+            "source": "manifest"
+        },
+        {
+            "path": "\/dashboard-air-quality",
+            "source": "manifest"
+        },
+        {
+            "path": "\/air-quality-data",
+            "source": "manifest"
+        },
+        {
+            "path": "\/air-quality-sync",
+            "source": "manifest"
+        },
+        {
+            "path": "\/air-quality-validation",
+            "source": "manifest"
+        },
+        {
+            "path": "\/dashboard-noise-quality",
+            "source": "manifest"
+        },
+        {
+            "path": "\/noise-quality-data",
+            "source": "manifest"
+        },
+        {
+            "path": "\/noise-monitor-sync",
+            "source": "manifest"
+        },
+        {
+            "path": "\/dashboard-water-quality",
+            "source": "manifest"
+        },
+        {
+            "path": "\/water-quality-data",
+            "source": "manifest"
+        },
+        {
+            "path": "\/water-quality-sync",
+            "source": "manifest"
+        },
+        {
+            "path": "\/vehicle-bookings\/1\/edit",
+            "source": "manifest"
+        },
+        {
+            "path": "\/meeting-room-bookings\/14\/edit",
+            "source": "manifest"
+        }
+    ],
+    "menu": [
+        {
+            "group": "เมนูหลัก",
+            "name": "หน้าหลัก",
+            "path": "\/apps"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "แดชบอร์ด \/ ผู้ใช้งานทั่วไป",
+            "path": "\/dashboard"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "สมุดโทรศัพท์",
+            "path": "\/phonebook"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "Onepage",
+            "path": "\/onepages"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "ข่าวสิ่งแวดล้อม",
+            "path": "\/social-listening\/contents"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "เบรนสตอร์ม",
+            "path": "\/brainstorming"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "นำเสนอข้อมูล",
+            "path": "\/presentations"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "จองห้องประชุม",
+            "path": "\/meeting-room-bookings"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "จองรถ",
+            "path": "\/vehicle-bookings"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "แชท",
+            "path": "\/chat"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "คลังภาพกิจกรรม",
+            "path": "\/albums"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "คลังความรู้",
+            "path": "\/forum"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "ลิงก์และคิวอาร์โค๊ด",
+            "path": "\/short-links"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "ลงเวลาออนไลน์",
+            "path": "\/attendance"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "กิจกรรมจับรางวัล",
+            "path": "\/reward-activities"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "เกมส์",
+            "path": "\/game"
+        },
+        {
+            "group": "ผู้ดูแลระบบ",
+            "name": "แดชบอร์ด \/ ผู้ดูแลระบบ",
+            "path": "\/dashboard-admin"
+        },
+        {
+            "group": "ผู้ดูแลระบบ",
+            "name": "หน่วยงาน",
+            "path": "\/agencies"
+        },
+        {
+            "group": "ผู้ดูแลระบบ",
+            "name": "ส่วนงาน",
+            "path": "\/departments"
+        },
+        {
+            "group": "ผู้ดูแลระบบ",
+            "name": "บทบาท",
+            "path": "\/roles"
+        },
+        {
+            "group": "ผู้ดูแลระบบ",
+            "name": "สิทธิ์",
+            "path": "\/permissions"
+        },
+        {
+            "group": "ผู้ดูแลระบบ",
+            "name": "กำหนดบทบาทผู้ใช้",
+            "path": "\/user-roles"
+        },
+        {
+            "group": "ผู้ดูแลระบบ",
+            "name": "การแจ้งเตือน",
+            "path": "\/notifications\/page"
+        },
+        {
+            "group": "ผู้ดูแลระบบ",
+            "name": "รวมแชททั้งหมด",
+            "path": "\/chat\/overview"
+        },
+        {
+            "group": "ผู้ดูแลระบบ",
+            "name": "รวมลิงก์และคิวอาร์โค้ด",
+            "path": "\/short-links\/overview"
+        },
+        {
+            "group": "ผู้ดูแลระบบ",
+            "name": "ประวัติการใช้งาน",
+            "path": "\/activity-logs"
+        },
+        {
+            "group": "ผู้ดูแลระบบ",
+            "name": "สถิติเข้าใช้งาน",
+            "path": "\/analytics"
+        },
+        {
+            "group": "ผู้ดูแลระบบ",
+            "name": "สรุปลงเวลาออนไลน์",
+            "path": "\/attendance-reports"
+        },
+        {
+            "group": "ผู้ดูแลระบบ",
+            "name": "สรุปลงเวลาออนไลน์บุคคล",
+            "path": "\/attendance-records"
+        },
+        {
+            "group": "ผู้ดูแลระบบ",
+            "name": "คลังเอกสาร",
+            "path": "\/documents"
+        },
+        {
+            "group": "ผู้ดูแลระบบ",
+            "name": "สำรองข้อมูล",
+            "path": "\/backups"
+        },
+        {
+            "group": "ผู้ดูแลระบบ",
+            "name": "ประกาศ",
+            "path": "\/announcements"
+        },
+        {
+            "group": "ผู้ดูแลระบบ",
+            "name": "ถังขยะ",
+            "path": "\/trash"
+        },
+        {
+            "group": "ผู้ดูแลระบบ",
+            "name": "จัดการกิจกรรมจับรางวัล",
+            "path": "\/admin\/reward-activities"
+        },
+        {
+            "group": "ผู้ดูแลระบบ",
+            "name": "จัดการเกมส์",
+            "path": "\/admin\/game"
+        },
+        {
+            "group": "ข้อมูลบุคลากร",
+            "name": "แดชบอร์ด \/ บุคลากร",
+            "path": "\/dashboard-staff"
+        },
+        {
+            "group": "ข้อมูลบุคลากร",
+            "name": "ข้อมูลบุคลากร",
+            "path": "\/staff"
+        },
+        {
+            "group": "ข้อมูลบุคลากร",
+            "name": "ชื่อผู้ใช้งานจาก AD",
+            "path": "\/ad-users"
+        },
+        {
+            "group": "ข้อมูลบุคลากร",
+            "name": "ขอเปลี่ยนข้อมูลบุคลากร",
+            "path": "\/staff-change-requests"
+        },
+        {
+            "group": "Onepage",
+            "name": "แดชบอร์ด \/ Onepage",
+            "path": "\/dashboard-onepage"
+        },
+        {
+            "group": "Onepage",
+            "name": "หมวดหมู่ Onepage",
+            "path": "\/onepage-categories"
+        },
+        {
+            "group": "ข่าวสิ่งแวดล้อม",
+            "name": "แดชบอร์ด \/ ข่าวสิ่งแวดล้อม",
+            "path": "\/social-listening\/dashboard"
+        },
+        {
+            "group": "ข่าวสิ่งแวดล้อม",
+            "name": "แหล่งข้อมูล",
+            "path": "\/social-listening\/sources"
+        },
+        {
+            "group": "ข่าวสิ่งแวดล้อม",
+            "name": "คีย์เวิร์ดที่ติดตาม",
+            "path": "\/social-listening\/keywords"
+        },
+        {
+            "group": "ข่าวสิ่งแวดล้อม",
+            "name": "หมวดหมู่ที่ระบบใช้",
+            "path": "\/social-listening\/categories"
+        },
+        {
+            "group": "ข่าวสิ่งแวดล้อม",
+            "name": "ดึงข้อมูลข่าวสิ่งแวดล้อม",
+            "path": "\/social-listening\/scrape"
+        },
+        {
+            "group": "คลังความรู้",
+            "name": "แดชบอร์ด \/ คลังความรู้",
+            "path": "\/dashboard-forum"
+        },
+        {
+            "group": "คลังความรู้",
+            "name": "หมวดหมู่คลังความรู้",
+            "path": "\/forum-categories"
+        },
+        {
+            "group": "คลังความรู้",
+            "name": "แท็กคลังความรู้",
+            "path": "\/forum-tags"
+        },
+        {
+            "group": "เบรนสตอร์ม",
+            "name": "แดชบอร์ด \/ เบรนสตอร์ม",
+            "path": "\/brainstorming\/dashboard"
+        },
+        {
+            "group": "จองห้องประชุม",
+            "name": "แดชบอร์ด \/ ห้องประชุม",
+            "path": "\/dashboard-meeting"
+        },
+        {
+            "group": "จองห้องประชุม",
+            "name": "สำหรับพนักงานบริการ",
+            "path": "\/meeting-room-catering"
+        },
+        {
+            "group": "จองห้องประชุม",
+            "name": "จัดการจองห้องประชุม",
+            "path": "\/meeting-room-manage"
+        },
+        {
+            "group": "จองห้องประชุม",
+            "name": "ห้องประชุม",
+            "path": "\/meeting-rooms"
+        },
+        {
+            "group": "จองห้องประชุม",
+            "name": "อาหารกลางวัน",
+            "path": "\/lunches"
+        },
+        {
+            "group": "จองห้องประชุม",
+            "name": "เครื่องดื่ม \/ อาหารว่าง",
+            "path": "\/snacks"
+        },
+        {
+            "group": "จองรถ",
+            "name": "แดชบอร์ด \/ ระบบจองรถ",
+            "path": "\/dashboard-vehicle"
+        },
+        {
+            "group": "จองรถ",
+            "name": "จัดการจองรถ",
+            "path": "\/vehicle-manage"
+        },
+        {
+            "group": "จองรถ",
+            "name": "พนักงานขับรถ",
+            "path": "\/drivers"
+        },
+        {
+            "group": "จองรถ",
+            "name": "ประเภทรถ",
+            "path": "\/vehicle-types"
+        },
+        {
+            "group": "จองรถ",
+            "name": "รถ",
+            "path": "\/vehicles"
+        },
+        {
+            "group": "คุณภาพอากาศ",
+            "name": "ตรวจสอบคุณภาพอากาศ",
+            "path": "\/air-quality-check"
+        },
+        {
+            "group": "คุณภาพอากาศ",
+            "name": "แดชบอร์ด \/ คุณภาพอากาศ",
+            "path": "\/dashboard-air-quality"
+        },
+        {
+            "group": "คุณภาพอากาศ",
+            "name": "ข้อมูลคุณภาพอากาศ",
+            "path": "\/air-quality-data"
+        },
+        {
+            "group": "คุณภาพอากาศ",
+            "name": "ดึงข้อมูลคุณภาพอากาศ",
+            "path": "\/air-quality-sync"
+        },
+        {
+            "group": "คุณภาพอากาศ",
+            "name": "ทดสอบความแม่นยำ",
+            "path": "\/air-quality-validation"
+        },
+        {
+            "group": "คุณภาพเสียง",
+            "name": "แดชบอร์ด \/ คุณภาพเสียง",
+            "path": "\/dashboard-noise-quality"
+        },
+        {
+            "group": "คุณภาพเสียง",
+            "name": "ข้อมูลคุณภาพเสียง",
+            "path": "\/noise-quality-data"
+        },
+        {
+            "group": "คุณภาพเสียง",
+            "name": "ดึงข้อมูลคุณภาพเสียง",
+            "path": "\/noise-monitor-sync"
+        },
+        {
+            "group": "คุณภาพน้ำ",
+            "name": "แดชบอร์ด \/ คุณภาพน้ำ",
+            "path": "\/dashboard-water-quality"
+        },
+        {
+            "group": "คุณภาพน้ำ",
+            "name": "ข้อมูลคุณภาพน้ำ",
+            "path": "\/water-quality-data"
+        },
+        {
+            "group": "คุณภาพน้ำ",
+            "name": "ดึงข้อมูลคุณภาพน้ำ",
+            "path": "\/water-quality-sync"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "หน้าหลัก",
+            "path": "\/apps"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "แดชบอร์ด \/ ผู้ใช้งานทั่วไป",
+            "path": "\/dashboard"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "สมุดโทรศัพท์",
+            "path": "\/phonebook"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "Onepage",
+            "path": "\/onepages"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "ข่าวสิ่งแวดล้อม",
+            "path": "\/social-listening\/contents"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "เบรนสตอร์ม",
+            "path": "\/brainstorming"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "นำเสนอข้อมูล",
+            "path": "\/presentations"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "จองห้องประชุม",
+            "path": "\/meeting-room-bookings"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "จองรถ",
+            "path": "\/vehicle-bookings"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "แชท",
+            "path": "\/chat"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "คลังภาพกิจกรรม",
+            "path": "\/albums"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "คลังความรู้",
+            "path": "\/forum"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "ลิงก์และคิวอาร์โค๊ด",
+            "path": "\/short-links"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "ลงเวลาออนไลน์",
+            "path": "\/attendance"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "กิจกรรมจับรางวัล",
+            "path": "\/reward-activities"
+        },
+        {
+            "group": "เมนูหลัก",
+            "name": "เกมส์",
+            "path": "\/game"
+        }
+    ]
+}
