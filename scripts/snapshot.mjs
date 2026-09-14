@@ -21,9 +21,10 @@ function pathToFile(pathname) {
 }
 
 function injectScripts(html) {
+  const base = (process.env.MOCKUP_BASE_PATH || '/Mockup').replace(/\/$/, '');
   const inject = `
-<script src="/shared/demo-banner.js"></script>
-<script src="/shared/demo-intercept.js"></script>`;
+<script src="${base}/shared/demo-banner.js"></script>
+<script src="${base}/shared/demo-intercept.js"></script>`;
   if (html.includes('</body>')) {
     return html.replace('</body>', inject + '\n</body>');
   }
@@ -31,16 +32,34 @@ function injectScripts(html) {
 }
 
 async function login(page) {
-  await page.goto(`${baseUrl}/signin`, { waitUntil: 'networkidle', timeout: 120000 });
+  await page.goto(`${baseUrl}/signin`, { waitUntil: 'domcontentloaded', timeout: 120000 });
+  await page.waitForSelector('input[name="username"]', { timeout: 60000 });
+  // Hide loading splash that intercepts clicks
+  await page.evaluate(() => {
+    document.querySelectorAll('[x-show="loaded"], .fixed.z-999999, [class*="z-999999"]').forEach((el) => {
+      el.style.display = 'none';
+      el.style.pointerEvents = 'none';
+    });
+  });
   await page.fill('input[name="username"]', username);
   await page.fill('input[name="password"]', password);
-  await page.click('button[type="submit"]');
-  await page.waitForURL(url => !url.pathname.includes('/signin') || url.pathname.includes('two-factor'), {
-    timeout: 60000,
-  }).catch(() => {});
+  await Promise.all([
+    page.waitForURL(url => !String(url).includes('/signin') || String(url).includes('two-factor'), {
+      timeout: 60000,
+    }).catch(() => {}),
+    page.click('#submit-btn', { force: true }),
+  ]);
   const current = page.url();
   if (current.includes('two-factor') || current.includes('approve-waiting')) {
     throw new Error('Demo user hit 2FA/approval — use shadow user demo-mockup from DemoMockupUserSeeder');
+  }
+  if (current.includes('/signin')) {
+    // Fallback: submit form via JS
+    await page.evaluate(() => document.querySelector('form')?.requestSubmit());
+    await page.waitForTimeout(3000);
+  }
+  if (page.url().includes('/signin')) {
+    throw new Error('Login failed — still on signin page: ' + page.url());
   }
 }
 
@@ -52,8 +71,14 @@ async function main() {
 
   const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
   const urls = (manifest.urls || []).map(u => (typeof u === 'string' ? u : u.path)).filter(Boolean);
+  // Ensure launcher root is captured
+  if (!urls.includes('/') && !urls.includes('/apps')) {
+    urls.unshift('/apps');
+  }
+  urls.unshift('/');
+  const uniqueUrls = [...new Set(urls)];
 
-  if (urls.length === 0) {
+  if (uniqueUrls.length === 0) {
     console.warn('No URLs in manifest — export manifest after seeding demo DB');
     process.exit(0);
   }
@@ -64,13 +89,20 @@ async function main() {
 
   await login(page);
 
-  for (const pathname of urls) {
+  for (const pathname of uniqueUrls) {
     const target = `${baseUrl}${pathname.startsWith('/') ? pathname : '/' + pathname}`;
     const outFile = pathToFile(pathname);
     fs.mkdirSync(path.dirname(outFile), { recursive: true });
 
     try {
-      const response = await page.goto(target, { waitUntil: 'networkidle', timeout: 120000 });
+      const response = await page.goto(target, { waitUntil: 'domcontentloaded', timeout: 120000 });
+      await page.waitForTimeout(800);
+      await page.evaluate(() => {
+        document.querySelectorAll('[x-show="loaded"], .fixed.z-999999, [class*="z-999999"]').forEach((el) => {
+          el.style.display = 'none';
+          el.style.pointerEvents = 'none';
+        });
+      });
       if (!response || response.status() >= 400) {
         console.warn(`Skip ${pathname} — HTTP ${response?.status()}`);
         continue;

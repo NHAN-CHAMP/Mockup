@@ -6,7 +6,7 @@
     "snapshot": "node scripts/snapshot.mjs",
     "rewrite": "node scripts/rewrite-links.mjs",
     "scrub": "node scripts/scrub-html.mjs",
-    "build": "npm run snapshot && npm run rewrite && npm run scrub"
+    "build": "npm run rewrite && npm run scrub"
   },
   "devDependencies": {
     "@playwright/test": "^1.51.0"

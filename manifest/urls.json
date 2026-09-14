@@ -1,5 +1,5 @@
 {
-    "generated_at": "2026-09-14T15:28:18+07:00",
+    "generated_at": "2026-09-14T15:41:11+07:00",
     "exclude_groups": [
         "เว็บไซต์"
     ],
@@ -298,7 +298,7 @@
             "source": "manifest"
         },
         {
-            "path": "\/meeting-room-bookings\/14\/edit",
+            "path": "\/meeting-room-bookings\/1\/edit",
             "source": "manifest"
         }
     ],

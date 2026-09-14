@@ -1,0 +1,81 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-CDxWhuPn.css",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "name": "app",
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-BvuoZj-E.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/js/components/map.js",
+      "resources/js/components/chart/chart-1.js",
+      "resources/js/components/chart/chart-2.js",
+      "resources/js/components/chart/chart-3.js",
+      "resources/js/components/chart/chart-6.js",
+      "resources/js/components/chart/chart-8.js",
+      "resources/js/components/chart/chart-13.js",
+      "resources/js/components/calendar-init.js"
+    ],
+    "css": [
+      "assets/app-DRf1F60d.css"
+    ]
+  },
+  "resources/js/components/calendar-init.js": {
+    "file": "assets/calendar-init-DwutGYSu.js",
+    "name": "calendar-init",
+    "src": "resources/js/components/calendar-init.js",
+    "isDynamicEntry": true
+  },
+  "resources/js/components/chart/chart-1.js": {
+    "file": "assets/chart-1-DmWf2UP5.js",
+    "name": "chart-1",
+    "src": "resources/js/components/chart/chart-1.js",
+    "isDynamicEntry": true
+  },
+  "resources/js/components/chart/chart-13.js": {
+    "file": "assets/chart-13-CGGjAbMh.js",
+    "name": "chart-13",
+    "src": "resources/js/components/chart/chart-13.js",
+    "isDynamicEntry": true
+  },
+  "resources/js/components/chart/chart-2.js": {
+    "file": "assets/chart-2-BAgL2vMv.js",
+    "name": "chart-2",
+    "src": "resources/js/components/chart/chart-2.js",
+    "isDynamicEntry": true
+  },
+  "resources/js/components/chart/chart-3.js": {
+    "file": "assets/chart-3-D-sG0G9b.js",
+    "name": "chart-3",
+    "src": "resources/js/components/chart/chart-3.js",
+    "isDynamicEntry": true
+  },
+  "resources/js/components/chart/chart-6.js": {
+    "file": "assets/chart-6-CcXkyGSk.js",
+    "name": "chart-6",
+    "src": "resources/js/components/chart/chart-6.js",
+    "isDynamicEntry": true
+  },
+  "resources/js/components/chart/chart-8.js": {
+    "file": "assets/chart-8-CyjWU2HP.js",
+    "name": "chart-8",
+    "src": "resources/js/components/chart/chart-8.js",
+    "isDynamicEntry": true
+  },
+  "resources/js/components/map.js": {
+    "file": "assets/map-BstRCvXC.js",
+    "name": "map",
+    "src": "resources/js/components/map.js",
+    "isDynamicEntry": true,
+    "css": [
+      "assets/map-DIsGouq0.css"
+    ]
+  }
+}
