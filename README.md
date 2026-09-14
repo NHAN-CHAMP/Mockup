@@ -9,13 +9,22 @@
 
 ## สร้าง/อัปเดตจาก pcdapp
 
+**อันตราย:** ห้าม `migrate:fresh` บน production `pcdapp`  
+Laravel **ไม่ override** `DB_*` ที่ export ไว้ใน shell — อย่า `source .env` ก่อนรัน `--env=demo`
+
 ```bash
 cd /var/www/pcdapp
-php artisan migrate:fresh --force
-php artisan db:seed --class=Database\\Seeders\\DemoDatabaseSeeder --force
-php artisan demo:export-manifest
+unset DB_CONNECTION DB_HOST DB_PORT DB_DATABASE DB_USERNAME DB_PASSWORD
 
-php artisan serve --host=127.0.0.1 --port=8765   # terminal แยก
+# .env.demo ต้องชี้ DB_DATABASE=pcdapp_demo (หรือ SQLite) — ไม่ใช่ pcdapp
+php artisan migrate:fresh --env=demo --force
+php artisan --env=demo tinker --execute='echo config("database.connections.".config("database.default").".database");'
+# ต้องได้ pcdapp_demo / sqlite path เท่านั้น
+
+php artisan db:seed --env=demo --class=Database\\Seeders\\DemoDatabaseSeeder --force
+php artisan demo:export-manifest --env=demo
+
+php artisan serve --env=demo --host=127.0.0.1 --port=8765   # terminal แยก
 
 cd Mockup
 npm install
